@@ -6,6 +6,7 @@ const findLocationByLatLong = async (latitude, longitude) => {
   const response = await fetch(
     `https://react-assessment-api.herokuapp.com/api/weather/location/search/?lattlong=${latlon}`
   );
+
   if (!response.ok) {
     return { error: { code: response.status } };
   }

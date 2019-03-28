@@ -20,6 +20,7 @@ class Weather extends Component {
     this.props.onLoad();
   }
   render() {
+    console.log(this.props);
     const {
       loading,
       name,
@@ -31,6 +32,7 @@ class Weather extends Component {
       <Chip
         label={`Weather in ${name}: ${weather_state_name} and ${temperatureinFahrenheit}°`}
       />
+  
     );
   }
 }
@@ -56,7 +58,7 @@ const mapDispatch = dispatch => ({
       type: actions.FETCH_WEATHER,
       longitude: -95.3698,
       latitude: 29.7604
-    })
+    }),
 });
 
 export default connect(
